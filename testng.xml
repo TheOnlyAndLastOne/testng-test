@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/ITO-User/IdeaProjects/testng-test">
+        <classes>
+            <class name="com.own.testng.TestDBConnection">
+                <methods>
+                    <include name="runOtherTest1"/>
+                    <include name="runOtherTest2"/>
+                </methods>
+            </class>
+            <class name="com.own.testng.DBConfig">
+                <methods>
+                    <include name="beforeSuite"/>
+                    <include name="AfterSuite"/>
+                    <include name="BeforeTest"/>
+                    <include name="AfterTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
