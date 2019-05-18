@@ -2,6 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="C:/Users/ITO-User/IdeaProjects/testng-test">
+
         <classes>
             <class name="com.own.testng.TestDBConnection">
                 <methods>
@@ -9,14 +10,81 @@
                     <include name="runOtherTest2"/>
                 </methods>
             </class>
-            <class name="com.own.testng.DBConfig">
+            <class name="com.own.testng.TestLifeCycle">
                 <methods>
                     <include name="beforeSuite"/>
-                    <include name="AfterSuite"/>
-                    <include name="BeforeTest"/>
-                    <include name="AfterTest"/>
+                    <include name="afterSuite"/>
+                    <include name="beforeTest"/>
+                    <include name="afterTest"/>
+
+                    <include name="beforeClass"/>
+                    <include name="afterClass"/>
+                    <include name="beforeMethod"/>
+                    <include name="afterMethod"/>
+                </methods>
+            </class>
+            <class name="com.own.testng.TestRuntime">
+                <methods>
+                    <include name="divisionWithException"/>
+                    <include name="divisionWithRuntimeException"/>
+                </methods>
+            </class>
+            <class name="com.own.testng.TestIgnore">
+                <methods>
+                    <include name="test1"/>
+                    <include name="test2"/>
+                    <include name="test3"/>
+                </methods>
+            </class>
+            <!--<class name="com.own.testng.TestTimeout">
+                <methods>
+                    <include name="testThisShouldPass"/>
+                    <include name="testThisShouldFail"/>
+                </methods>
+            </class>-->
+
+        </classes>
+    </test>
+
+    <test name="selenium">
+        <groups>
+            <run>
+                <include name="selenium-common"/>
+                <include name="selenium-common-test"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.own.testng.TestGroup">
+                <methods>
+                    <include name="setupDB"/>
+                    <include name="cleanDB"/>
+                    <include name="runSelenium"/>
+                    <include name="runSelenium1"/>
+                    <include name="testConnectOracle"/>
+                    <include name="testConnectMsSQL"/>
+                    <include name="runFinal"/>
+                </methods>
+            </class>
+            <class name="com.own.testng.TestCommonGroup">
+                <methods>
+                    <include name="seleniumCommon1"/>
+                    <include name="seleniumCommon2"/>
+                    <include name="seleniumCommon3"/>
                 </methods>
             </class>
         </classes>
     </test>
+
+    <test name="param">
+        <parameter name="username" value="admin"/>
+        <parameter name="password" value="root"/>
+        <classes>
+            <class name="com.own.testng.TestParameter">
+                <methods>
+                    <include name="testParameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
 </suite>
