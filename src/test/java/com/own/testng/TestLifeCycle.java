@@ -8,22 +8,22 @@ import org.testng.annotations.*;
  * 钩子函数
  */
 public class TestLifeCycle {
-    @BeforeSuite()
+    @BeforeSuite(description = "测试BeforeSuite")
     public void beforeSuite() {
         System.out.println("@BeforeSuite");
     }
 
-    @AfterSuite()
+    @AfterSuite(description = "测试AfterSuite")
     public void afterSuite() {
         System.out.println("@AfterSuite");
     }
 
-    @BeforeTest()
+    @BeforeTest(description = "测试BeforeTest")
     public void beforeTest() {
         System.out.println("@BeforeTest");
     }
 
-    @AfterTest()
+    @AfterTest(description = "测试AfterTest")
     public void afterTest() {
         System.out.println("@AfterTest");
     }

@@ -15,7 +15,7 @@ public class TestIgnore {
         Assert.assertEquals(true, true);
     }
 
-    @Test(enabled = true)
+    @Test(description = "这是test2",enabled = true)
     public void test2() {
         System.out.println("test2");
         Assert.assertEquals(true, true);
