@@ -18,7 +18,7 @@ public class TestRuntime {
 //        int i = 1 / 0;
 //        System.out.println("After division the value of i is :"+ i);
 //        Assert.assertTrue(1==2,"测试结果出错了，吧啦吧啦吧啦");
-        MyAssert.verifyTrue(1==1,"测试结果出错了，吧啦吧啦吧啦");
+        MyAssert.verifyTrue(1==2,"测试结果出错了，吧啦吧啦吧啦");
 
     }
 
